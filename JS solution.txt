@@ -1,0 +1,45 @@
+<html>
+<body>
+    <script>
+let numbers = [5,8,0,1,9,11,15,16];
+
+console.log("Original numbers list: ", numbers)
+
+for(let i = 0 ; i < numbers.length ; i++)
+{
+    //I removed the -1 from length of the array name which is numbers to be orginal list as it is above
+    for(let j = 0 ; j < numbers.length ; j++)
+    {
+        if(numbers[i] > numbers[j + 1])
+        {
+            let temp = numbers[j];
+            numbers[j] = numbers[j + 1]
+            numbers[j + 1] = temp;
+            // I used sort function to sort the array in ascending order
+            numbers.sort();
+
+        }
+    }
+}
+
+console.log("Numbers list After sorting: ", numbers)
+
+for(let i = 0 ; i < numbers.length ; i++)
+{
+    for(let j = 0 ; j < numbers.length ; j++)
+    {
+        if(numbers[i] < numbers[j + 1])
+        {
+            let temp = numbers[j];
+            numbers[j] = numbers[j + 1]
+            numbers[j + 1] = temp;
+            //I used sort function with reverse function to sorting the array in descending order
+            numbers.sort().reverse();
+        }
+    }
+}
+
+console.log("Numbers list After Desc sorting: ", numbers)
+</script>
+</body>
+</html>

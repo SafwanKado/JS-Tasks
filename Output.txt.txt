@@ -1,0 +1,23 @@
+<html>
+<body>
+	<script type="text/javascript">
+	let numbers=[10,10,31,19,18,21,55,23,20,10,10,78,80,99,15];
+for(let i = 0 ; i < numbers.length ; i++)
+{
+	for(let j = 0 ; j < numbers.length ; j++)
+    {
+        if(numbers[i] > numbers[j + 1])
+        {
+            let temp = numbers[j];
+            numbers[j] = numbers[j + 1]
+            numbers[j + 1] = temp;
+            // I used sort function to sort the array in ascending order
+            numbers.sort();
+
+        }
+    }
+}
+console.log("Numbers list After sorting: ", numbers)
+	</script>
+</body>
+</html>
